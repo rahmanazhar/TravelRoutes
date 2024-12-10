@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Travel Routes
+
+A modern web application for planning and visualizing travel routes on an interactive map. This application helps users create, manage, and visualize their travel itineraries with an intuitive interface.
+
+## Features
+
+- 🗺️ Interactive map visualization
+- 🔍 Search functionality for places
+- 📍 Place listing and management
+- 🛣️ Travel route creation and visualization
+- 🎨 Modern, responsive UI with Tailwind CSS
+- ⚡ Built with Next.js for optimal performance
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- Map Services Integration
+- Modern JavaScript (ES6+)
+- Custom Hooks for Map Operations
+- SVG Icons for Enhanced UI
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.x or later
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/TravelRoutes.git
+cd TravelRoutes
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── components/         # React components
+│   ├── Map.js         # Map visualization component
+│   ├── PlacesList.js  # Places management
+│   ├── SearchBar.js   # Search functionality
+│   └── TravelRoutes.js# Route management
+├── hooks/             # Custom React hooks
+│   └── useMapOperations.js
+├── utils/             # Utility functions
+│   └── mapServices.js
+└── ...
+```
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Use the search bar to find places you want to visit
+2. Add places to your route list
+3. Visualize your travel route on the interactive map
+4. Modify and optimize your route as needed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application uses Next.js's app router and follows modern React practices. To modify the application:
 
-## Deploy on Vercel
+- Edit `app/page.js` for the main page layout
+- Modify components in the `app/components` directory
+- Update map operations in `app/hooks/useMapOperations.js`
+- Add new utility functions in `app/utils`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
