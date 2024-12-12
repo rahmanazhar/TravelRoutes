@@ -130,6 +130,7 @@ export const useMapOperations = (map) => {
     try {
       const directionsService = new google.maps.DirectionsService();
       const result = await calculateOptimalRoute(directionsService, routePlaces);
+      console.log('Updated directions:', result);
       setDirections(result);
     } catch (err) {
       console.error('Failed to update directions:', err);

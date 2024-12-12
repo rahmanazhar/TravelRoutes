@@ -1,0 +1,80 @@
+{
+  "info": {
+    "name": "Travel Routes API",
+    "description": "Collection for testing Travel Routes API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search Places",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/places?query=Johor Bahru",
+          "host": ["{{base_url}}"],
+          "path": ["api", "places"],
+          "query": [
+            {
+              "key": "query",
+              "value": "Johor Bahru",
+              "description": "Search query for places"
+            }
+          ]
+        },
+        "description": "Search for places using Google Places API"
+      }
+    },
+    {
+      "name": "Get Directions (Direct)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"origin\": {\n        \"lat\": 1.4927,\n        \"lng\": 103.7414\n    },\n    \"destination\": {\n        \"lat\": 6.4414,\n        \"lng\": 100.1986\n    }\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/directions",
+          "host": ["{{base_url}}"],
+          "path": ["api", "directions"]
+        },
+        "description": "Get directions from Johor to Perlis"
+      }
+    },
+    {
+      "name": "Get Directions (With Waypoints)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"origin\": {\n        \"lat\": 1.4927,\n        \"lng\": 103.7414\n    },\n    \"destination\": {\n        \"lat\": 6.4414,\n        \"lng\": 100.1986\n    },\n    \"waypoints\": [\n        {\n            \"lat\": 3.1390,\n            \"lng\": 101.6869\n        }\n    ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/directions",
+          "host": ["{{base_url}}"],
+          "path": ["api", "directions"]
+        },
+        "description": "Get directions from Johor to Perlis via Kuala Lumpur"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
